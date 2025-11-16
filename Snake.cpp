@@ -50,7 +50,6 @@ void VeKhung(int width, int height){
     }
 }
 
-
 int main()
 {
     CONRAN r;
@@ -60,7 +59,7 @@ int main()
     srand((int)time(0));
     Qua.x = rand()%(MAXX-MINX)+MINX;
     Qua.y = rand()%(MAXY-MINY)+MINY;
-    VeKhung(120, 120);	
+    VeKhung(100, 100);	
     while (1){
         if (kbhit()){
             t = getch();
