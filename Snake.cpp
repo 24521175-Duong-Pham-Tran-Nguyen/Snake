@@ -39,6 +39,18 @@ public:
     }
 };
 
+void VeKhung(int width, int height){
+    for(int x = 0; x <= width; x++){
+        gotoxy(x, 0); cout << "#";
+        gotoxy(x, height); cout << "#";
+    }
+    for(int y = 0; y <= height; y++){
+        gotoxy(0, y); cout << "#";
+        gotoxy(width, y); cout << "#";
+    }
+}
+
+
 int main()
 {
     CONRAN r;
@@ -48,6 +60,7 @@ int main()
     srand((int)time(0));
     Qua.x = rand()%(MAXX-MINX)+MINX;
     Qua.y = rand()%(MAXY-MINY)+MINY;
+    VeKhung(100, 100);	
     while (1){
         if (kbhit()){
             t = getch();
