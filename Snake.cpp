@@ -60,7 +60,7 @@ int main()
     srand((int)time(0));
     Qua.x = rand()%(MAXX-MINX)+MINX;
     Qua.y = rand()%(MAXY-MINY)+MINY;
-    VeKhung(100, 100);	
+    VeKhung(120, 120);	
     while (1){
         if (kbhit()){
             t = getch();
