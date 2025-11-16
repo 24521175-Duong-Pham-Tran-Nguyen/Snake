@@ -31,7 +31,7 @@ public:
         if (Huong==1) A[0].y = A[0].y + 1;
         if (Huong==2) A[0].x = A[0].x - 1;
         if (Huong==3) A[0].y = A[0].y - 1;
-        if ((A[0].x==Qua.x)&&(A[0].x==Qua.y)){
+        if ((A[0].x==Qua.x)&&(A[0].y==Qua.y)){
             DoDai++;
             Qua.x= rand()%(MAXX-MINX)+MINX;
             Qua.y= rand()%(MAXY-MINY)+MINY;
