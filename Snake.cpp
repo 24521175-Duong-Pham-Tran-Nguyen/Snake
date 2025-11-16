@@ -39,15 +39,13 @@ public:
     }
 };
 
-void VeKhung(int width, int height){
-    for(int x = 0; x <= width; x++){
-        gotoxy(x, 0); cout << "#";
-        gotoxy(x, height); cout << "#";
-    }
-    for(int y = 0; y <= height; y++){
-        gotoxy(0, y); cout << "#";
-        gotoxy(width, y); cout << "#";
-    }
+void VeKhung(){
+    for (int i = MINX ; i<=MAXX ; i++)
+        for (int j = MINX ; j<=MAXY ; j++)
+            if ((i==MINX) || (i==MAXX) || (j==MINY) || (j==MAXY)){
+            gotoxy(i,j);
+            printf("+");
+        }
 }
 
 int main()
@@ -59,7 +57,6 @@ int main()
     srand((int)time(0));
     Qua.x = rand()%(MAXX-MINX)+MINX;
     Qua.y = rand()%(MAXY-MINY)+MINY;
-    VeKhung(100, 100);	
     while (1){
         if (kbhit()){
             t = getch();
@@ -69,6 +66,7 @@ int main()
             if (t=='x') Huong = 1;
         }
         system("cls");
+	VeKhung();
         r.Ve(Qua); 
         r.DiChuyen(Huong, Qua); 
         Sleep(300);
